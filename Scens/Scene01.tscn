@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://co0g3w4u7heu1"]
+
+[ext_resource type="Texture2D" uid="uid://d3xgumoxxfedq" path="res://Legacy Collection/Legacy Collection/Assets/Warped/Environments/another-world/PNG/another-world-PREVIEW.png" id="1_ppb42"]
+[ext_resource type="PackedScene" uid="uid://bqnd5vs6dfcqk" path="res://Scens/player.tscn" id="2_kf7jh"]
+
+[node name="Node2D" type="Node2D" unique_id=373212491]
+
+[node name="background1" type="Sprite2D" parent="." unique_id=1547722758]
+position = Vector2(1, 88)
+texture = ExtResource("1_ppb42")
+metadata/_edit_lock_ = true
+
+[node name="background2" type="Sprite2D" parent="." unique_id=1120335387]
+position = Vector2(1, 264)
+texture = ExtResource("1_ppb42")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1663543013]
+offset = Vector2(-222, 86)
+zoom = Vector2(3.755, 3.755)
+metadata/_edit_lock_ = true
+
+[node name="player" parent="Camera2D" unique_id=1393437952 instance=ExtResource("2_kf7jh")]
+position = Vector2(-342, 96)

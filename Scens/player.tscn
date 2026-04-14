@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bqnd5vs6dfcqk"]
+
+[ext_resource type="Script" uid="uid://cyisttg1ni2iv" path="res://Scripts/player.gd" id="1_y1jf2"]
+[ext_resource type="Texture2D" uid="uid://8cmiafyhhsk6" path="res://Legacy Collection/Legacy Collection/Assets/Gothicvania/Characters/Bridge Heroine/Heroine base/Spritesheets/idle.png" id="1_yo08b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1jf2"]
+atlas = ExtResource("1_yo08b")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or86s"]
+atlas = ExtResource("1_yo08b")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u66df"]
+atlas = ExtResource("1_yo08b")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bngc5"]
+atlas = ExtResource("1_yo08b")
+region = Rect2(384, 0, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nw0oj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1jf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or86s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u66df")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bngc5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="player" type="CharacterBody2D" unique_id=1393437952]
+script = ExtResource("1_y1jf2")
+move_speed = 100.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=279676491]
+sprite_frames = SubResource("SpriteFrames_nw0oj")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0
